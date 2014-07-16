@@ -1,0 +1,62 @@
+<div class="col-md-3" ng-controller="mainController">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            Personal Info
+        </div>
+        <div class="panel-body">
+            <div class="card hovercard">
+               <img src="http://aozora.github.io/bootplus/assets/img/the-simpsons.png" alt=""/>
+               <div class="avatar">
+                  <img ng-src="http://aozora.github.io/bootplus/assets/img/avatar_homer.png" alt="" />
+               </div>
+               <div class="info">
+                  <div class="title">
+                     {{user.name}} {{user.surname}}
+                  </div>
+                  <div class="desc">Date of Birth: {{user.dateOfBirth}}</div>
+               </div>
+               <div class="bottom">
+                  <button class="btn">Add</button>
+               </div>
+            </div>
+        </div>
+        <div class="panel-footer">
+            Panel Footer
+        </div>
+    </div>
+</div>
+<div class="col-md-9" ng-controller="mainController">    
+    <div class="panel panel-default">
+        <div class="panel-heading clearfix">
+      <h4 class="panel-title pull-left" style="padding-top: 7.5px;">Google Graphs</h4>
+      <div class="btn-group pull-right">
+        <a href="#" class="btn btn-success btn-sm"><span class="glyphicon glyphicon-share"></span> Share</a>
+        <a href="#" class="btn btn-warning btn-sm"><span class="glyphicon glyphicon-download-alt"></span> Download PDF</a>
+      </div>
+    </div>
+        <div class="panel-body">
+        <div class="container-fluid" >
+        
+        <div class="row-fluid">
+            <div class=".col-xs-12 .col-sm-6 .col-lg-8">
+                <div id="chart1" google-chart chart="graphs[0]" style="{{cssStyle}}" on-ready="chartReady()" ng-init="chartSelectionChange('Table')"></div>
+            </div>
+        </div>
+        <div class="row-fluid">
+            <div class=".col-xs-12 .col-sm-6 .col-lg-8">
+                <div id="chart2" google-chart chart="graphs[1]" style="{{cssStyle}}" on-ready="chartReady()" ng-init="chartSelectionChange('PieChart')"></div>
+            </div>
+        </div> 
+        <div class="row-fluid">
+            <div class=".col-xs-12 .col-sm-6 .col-lg-8">
+                <div id="chart3" google-chart chart="graphs[2]" style="{{cssStyle}}" on-ready="chartReady()" ng-init="chartSelectionChange('ColumnChart')"></div>
+            </div>
+        </div>           
+    </div>
+        </div>
+        <div class="panel-footer">
+            Panel Footer
+        </div>
+    </div>
+    
+</div>

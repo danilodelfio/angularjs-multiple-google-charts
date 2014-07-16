@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<!-- define angular app -->
+<html ng-app="myApp">
+
+<head>
+  <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" />
+  <!-- Awesome components library -->
+  <link rel="stylesheet" href="http://aozora.github.io/bootplus/assets/css/bootplus.css"/>
+  
+</head>
+
+<!-- define angular controller -->
+<body>
+  <!-- -->
+  <div class="container-fluid">
+			<div class="row-fluid">
+				<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+					<div class="navbar-header">
+				        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+				        <span class="sr-only">Toggle navigation</span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				        </button>
+				        <a class="navbar-brand" rel="home" href="#" title="Danilo Del Fio">Danilo Del Fio</a>
+				    </div>
+				    <div class="collapse navbar-collapse navbar-ex1-collapse">
+				    	<div class="col-md-6">
+					    	<form class="navbar-form"  method="get" id="dummy-form" name="dummy-form">
+					        	<div class="btn-group pull-left" style="margin-right:10px;">
+					        	    <ul class="nav navbar-nav navbar-left">
+                                        <li><a href="#"><i class="fa fa-home"></i> Home</a></li>
+                                        <li><a href="#google-charts"><i class="fa fa-shield"></i> Google Charts</a></li>
+                                    </ul>   		
+								</div>
+					        </form>
+				        </div>
+				    </div>
+				</div>				
+			</div>	
+
+  <div class="row-fluid" style="margin-top:10px;">
+  
+    <!-- this is where content will be injected -->
+    <div ng-view></div>
+    
+  </div>
+  
+  <div class="row-fluid">
+        <div class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" rel="home" href="http://www.danilodelfio.com" title="Danilo Del Fio">Danilo Del Fio</a>
+            </div>
+          </div>
+  </div>
+  </div>
+  <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular.min.js"></script>
+  <script src="http://code.angularjs.org/1.2.0-rc.2/angular-route.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.10.0/ui-bootstrap-tpls.min.js"></script>
+  <script src="http://bouil.github.io/angular-google-chart/ng-google-chart.js"></script>
+  <script src="app.js"></script>
+  <script src="controllers.js"></script>
+  <script src="services.js"></script>
+
+
+  <script>
+      // This script is useful for body padding 
+      $(window).on('resize load', function() {
+            $('body').css({"padding-top": $(".navbar").height() + "px"});
+        });
+  </script>
+</body>
+
+</html>

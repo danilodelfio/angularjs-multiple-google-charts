@@ -1,10 +1,10 @@
 /* Controllers */
-var ehr= angular.module('app.controllers', ['ui.bootstrap', 'googlechart']);
+var ctrl= angular.module('app.controllers', ['ui.bootstrap', 'googlechart']);
 
 // create the controller and inject Angular's $scope
 	
 
-    ehr.controller('mainController', function($scope, chartService, userService) {
+    ctrl.controller('mainController', function($scope, chartService, userService) {
         $scope.graphs = [];
         var chart1 = {};
 		$scope.user = userService.getUser();
